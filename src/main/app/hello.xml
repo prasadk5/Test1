@@ -14,6 +14,7 @@ http://www.mulesoft.org/schema/mule/tls http://www.mulesoft.org/schema/mule/tls/
     </http:listener-config>
     <flow name="helloFlow">
         <http:listener config-ref="HTTP_Listener_Configuration" path="/helloNew" doc:name="HTTPS"/>
+        <logger message="track the info for hello project" level="INFO" doc:name="Logger"/>
         <set-payload value="hello mulesoft" doc:name="Set Payload"/>
     </flow>
 </mule>
